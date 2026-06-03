@@ -46,7 +46,7 @@ export default function Hero({ onScrollToInquiry, onScrollToServices }: HeroProp
               className="inline-flex items-center space-x-2 bg-brand-500/20 border border-brand-500/40 text-brand-200 px-4 py-1.5 rounded-full text-xs font-semibold tracking-wide backdrop-blur-sm"
             >
               <Zap className="h-3 w-3 animate-bounce text-yellow-400 shrink-0" />
-              <span>수도권 전지역 30분 출동 대기 (오토바이·탑차 즉시 출동)</span>
+              <span>수도권 전지역 30분 출동 대기</span>
             </motion.div>
 
             {/* Main Headline */}
