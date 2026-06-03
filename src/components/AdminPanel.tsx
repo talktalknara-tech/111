@@ -68,7 +68,7 @@ export default function AdminPanel({ isOpen, onClose, refreshTrigger }: AdminPan
       setIsUnlocked(true);
       setErrorMsg('');
     } else {
-      setErrorMsg('비밀번호가 올바르지 않습니다. (데모 비밀번호: 1019 또는 그냥 엔터)');
+      setErrorMsg('비밀번호가 올바르지 않습니다.');
     }
   };
 
@@ -151,10 +151,10 @@ export default function AdminPanel({ isOpen, onClose, refreshTrigger }: AdminPan
                   type="password"
                   value={passcode}
                   onChange={(e) => setPasscode(e.target.value)}
-                  placeholder="관리자 비번 (비밀번호: 1019 혹은 빈칸)"
+                  placeholder="관리자 비밀번호 입력"
                   className="w-full border border-gray-200 bg-gray-50 rounded-xl px-4 py-3 text-sm text-center font-bold tracking-widest focus:outline-none focus:ring-2 focus:ring-brand-500/20 focus:border-brand-500"
                 />
-                <p className="text-[10px] text-gray-400 font-bold">💡 실 기사 보증 데모용 비밀번호는 <span className="text-brand-600 underline">1019</span> 또는 <span className="text-brand-600 underline">빈칸</span> 모두 승인됩니다.</p>
+                <p className="text-[10px] text-gray-400 font-bold">💡 등록된 전용 관리자 계정의 비밀번호를 입력해 주십시오.</p>
               </div>
 
               {errorMsg && <p className="text-red-500 text-[10px] font-bold">{errorMsg}</p>}
