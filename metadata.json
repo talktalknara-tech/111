@@ -1,0 +1,6 @@
+{
+  "name": "관통사들 - 하수구 변기 싱크대 막힘 설비전문",
+  "description": "하수구막힘, 변기막힘, 싱크대막힘, 수전교체, 펌프교체, 해빙작업 등 각종 설비 전문 서비스 '관통사들'의 현대적이고 깔끔한 원페이지 공식 홈페이지입니다.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
