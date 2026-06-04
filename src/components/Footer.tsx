@@ -69,7 +69,7 @@ export default function Footer({ onScrollToSection, onOpenAdmin }: FooterProps) 
           <div className="space-y-1">
             <p>상호명: 관통사들 | 대표기사: 설비 기능 마스터 | 연락처 010-6333-9873</p>
             <p>주요 업무: 하수구막힘, 변기막힘, 싱크대막힘, 수전교체, 펌프교체, 해빙작업, 각종설비 일체</p>
-            <p className="text-slate-600">Copyright © 2026 Gwantongsa-deul. All rights reserved. (AI Studio Optimized Website)</p>
+            <p className="text-slate-600">Copyright © 2026 Gwantongsa-deul. All rights reserved.</p>
           </div>
           <div className="flex gap-4">
             <button onClick={() => onScrollToSection('hero')} className="hover:text-slate-400 cursor-pointer">맨위로 ➔</button>
