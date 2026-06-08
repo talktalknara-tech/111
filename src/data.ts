@@ -1,4 +1,4 @@
-import heroBanner from './assets/images/hero_plumber_banner_1780283598183.png';
+import heroBanner from './assets/images/pipe_flow_hero_1780902860917.png';
 import drainCleaning from './assets/images/drain_cleaning_service_1780283613742.png';
 import faucetReplacement from './assets/images/faucet_replacement_service_1780283628277.png';
 import toiletUnclog from './assets/images/toilet_unclog_service_1780283646222.png';

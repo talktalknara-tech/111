@@ -8,9 +8,6 @@ interface HeroProps {
 }
 
 export default function Hero({ onScrollToInquiry, onScrollToServices }: HeroProps) {
-  // Direct kakaotalk mock link (or template link)
-  const kakaoChatUrl = "https://pf.kakao.com/_qxbGxlxl/chat"; // Or generic chat interface trigger
-
   return (
     <section
       id="hero"
