@@ -42,14 +42,14 @@ export default function Services({ onSelectServiceForInquiry }: ServicesProps) {
         </div>
 
         {/* Filter Tabs */}
-        <div className="flex flex-wrap justify-center gap-2 mb-12">
+        <div className="flex overflow-x-auto sm:flex-wrap sm:justify-center gap-2 mb-12 pb-3 sm:pb-0 scrollbar-none snap-x snap-mandatory px-4 -mx-4 justify-start">
           {categories.map((cat) => (
             <button
               key={cat.id}
               onClick={() => setActiveCategory(cat.id as any)}
-              className={`px-5 py-2.5 rounded-2xl text-sm font-bold transition-all duration-200 cursor-pointer ${
+              className={`px-5 py-2.5 rounded-2xl text-sm font-bold transition-all duration-200 cursor-pointer snap-start shrink-0 ${
                 activeCategory === cat.id
-                  ? 'bg-brand-600 text-white shadow-lg shadow-brand-500/10 -translate-y-0.5'
+                  ? 'bg-brand-600 text-white shadow-lg shadow-brand-500/15 -translate-y-0.5'
                   : 'bg-white text-gray-600 border border-gray-100 hover:bg-gray-50 hover:text-gray-900 shadow-sm'
               }`}
             >

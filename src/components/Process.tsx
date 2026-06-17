@@ -22,11 +22,14 @@ export default function Process() {
         </div>
 
         {/* Process Steps Track */}
-        <div className="relative mt-12">
+        <div className="relative mt-12 pl-2 sm:pl-0">
           {/* Connecting line on desktop */}
           <div className="hidden lg:block absolute top-[44px] left-[10%] right-[10%] h-0.5 bg-gray-100 z-0" />
 
-          <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 relative z-10">
+          {/* Connecting line on mobile */}
+          <div className="lg:hidden absolute left-[34px] sm:left-[36px] top-6 bottom-6 w-0.5 border-l-2 border-dashed border-brand-200/65 z-0" />
+
+          <div className="grid grid-cols-1 lg:grid-cols-5 gap-6 lg:gap-8 relative z-10">
             {PROCESS_STEPS.map((step, idx) => (
               <motion.div
                 key={step.step}
@@ -34,19 +37,19 @@ export default function Process() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: '-100px' }}
                 transition={{ duration: 0.5, delay: idx * 0.1 }}
-                className="flex flex-col items-center text-center group"
+                className="flex flex-row items-start lg:flex-col lg:items-center text-left lg:text-center group gap-4 lg:gap-0"
               >
                 {/* Step circle */}
-                <div className="w-16 h-16 rounded-3xl bg-brand-50 border-2 border-brand-100 flex items-center justify-center text-xl font-black text-brand-700 tracking-tight shadow-md group-hover:bg-brand-600 group-hover:text-white group-hover:border-brand-600 group-hover:rotate-6 transition-all duration-300">
+                <div className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 rounded-xl sm:rounded-2xl lg:rounded-3xl bg-brand-50 border-2 border-brand-100 flex items-center justify-center text-base lg:text-xl font-black text-brand-700 tracking-tight shadow-md group-hover:bg-brand-600 group-hover:text-white group-hover:border-brand-600 group-hover:rotate-6 transition-all duration-300 shrink-0 z-10">
                   {step.step}
                 </div>
 
                 {/* Content Box */}
-                <div className="mt-6 bg-gray-50 border border-gray-100/80 rounded-2xl p-5 hover:bg-white hover:shadow-xl hover:border-brand-100 transition-all duration-300 flex-grow w-full">
-                  <h3 className="font-extrabold text-gray-900 text-base leading-snug group-hover:text-brand-700 transition-colors">
+                <div className="mt-0 lg:mt-6 bg-gray-50 border border-gray-100/80 rounded-2xl p-4 sm:p-5 hover:bg-white hover:shadow-xl hover:border-brand-100 transition-all duration-300 flex-grow w-full">
+                  <h3 className="font-extrabold text-gray-900 text-sm sm:text-base leading-snug group-hover:text-brand-700 transition-colors">
                     {step.title}
                   </h3>
-                  <p className="text-xs text-gray-600 mt-2.5 leading-relaxed font-medium">
+                  <p className="text-[11px] sm:text-xs text-gray-600 mt-2 leading-relaxed font-semibold">
                     {step.description}
                   </p>
                 </div>

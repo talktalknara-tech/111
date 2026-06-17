@@ -152,7 +152,7 @@ export default function InquiryForm({ preselectedService, onClearPreselected, on
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
           
           {/* Inquiry input form Container */}
-          <div className="lg:col-span-7 bg-white rounded-3xl p-6 sm:p-10 border border-gray-100 shadow-xl relative">
+          <div className="lg:col-span-7 bg-white rounded-3xl p-5 sm:p-10 border border-gray-100 shadow-xl relative">
             <div className="absolute top-0 left-12 w-24 h-1 bg-brand-600 rounded-b-full" />
             
             <div className="mb-8">
@@ -303,7 +303,7 @@ export default function InquiryForm({ preselectedService, onClearPreselected, on
           </div>
 
           {/* Right Side Live Indicator Queue Board */}
-          <div className="lg:col-span-5 bg-slate-900 text-white rounded-3xl p-6 sm:p-8 shadow-xl relative overflow-hidden flex flex-col h-full border border-slate-800">
+          <div className="lg:col-span-5 bg-slate-900 text-white rounded-3xl p-5 sm:p-8 shadow-xl relative overflow-hidden flex flex-col h-full border border-slate-800">
             {/* Ambient pattern */}
             <div className="absolute top-0 right-0 w-32 h-32 bg-brand-500/5 rounded-full blur-2xl" />
 

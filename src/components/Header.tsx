@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Phone, Menu, X, MessageSquare, Wrench } from 'lucide-react';
+import { Phone, Menu, X, MessageSquare, Wrench, ChevronRight } from 'lucide-react';
 
 interface HeaderProps {
   onScrollToSection: (sectionId: string) => void;
@@ -142,37 +142,44 @@ export default function Header({ onScrollToSection, onOpenInquiry, onOpenAdmin }
 
       {/* Mobile Drawer menu */}
       {isMobileMenuOpen && (
-        <div className="md:hidden absolute top-full left-0 right-0 bg-white shadow-xl border-t border-gray-100 animate-fade-in-up py-4 px-6 flex flex-col space-y-4">
+        <div className="md:hidden absolute top-full left-0 right-0 bg-white/98 backdrop-blur-lg shadow-2xl border-t border-gray-100 py-5 px-5 flex flex-col space-y-3.5 animate-in fade-in slide-in-from-top-4 duration-200">
+          <div className="text-[10px] font-extrabold text-gray-400 tracking-wider uppercase border-b border-gray-50 pb-1.5 mb-1">
+            관통사들 모바일 탐색 메뉴
+          </div>
           {menuItems.map((item) => (
             <button
               key={item.id}
               onClick={() => handleNavClick(item.id)}
-              className="text-left py-2.5 text-base font-semibold text-gray-700 border-b border-gray-50 active:text-brand-600"
+              className="flex items-center justify-between py-2.5 px-3 text-sm font-bold text-gray-700 hover:text-brand-600 active:bg-slate-50 rounded-xl transition-all border-b border-gray-100/60"
             >
-              {item.label}
+              <span className="flex items-center space-x-2">
+                <span className="w-1.5 h-1.5 bg-brand-500 rounded-full shrink-0" />
+                <span>{item.label}</span>
+              </span>
+              <ChevronRight className="h-4 w-4 text-gray-400" />
             </button>
           ))}
-          <div className="pt-2 flex flex-col space-y-2">
+          <div className="pt-3 flex flex-col space-y-2">
             <a
               href="tel:010-6333-9873"
-              className="flex items-center justify-center space-x-2 bg-emerald-600 hover:bg-emerald-700 text-white py-3 rounded-xl font-bold text-center shadow-sm"
+              className="flex items-center justify-center space-x-2 bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 text-white py-3.5 rounded-xl font-bold text-center text-sm shadow-md"
             >
-              <Phone className="h-5 w-5 fill-current" />
-              <span>전화연결 (010-6333-9873)</span>
+              <Phone className="h-4 w-4 fill-current shrink-0" />
+              <span>전화 즉시 상담 연결</span>
             </a>
             <a
               href="sms:010-6333-9873?body=안녕하세요 관통사들! 하수구·변기·싱크대·종합설비 빠른 상담 및 출동 문의드립니다."
-              className="flex items-center justify-center space-x-2 bg-brand-600 hover:bg-brand-700 text-white py-3 rounded-xl font-bold text-center shadow-md cursor-pointer"
+              className="flex items-center justify-center space-x-2 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white py-3.5 rounded-xl font-bold text-center text-sm shadow-md cursor-pointer"
             >
-              <MessageSquare className="h-5 w-5" />
-              <span>문자 상담 / 바로 보내기</span>
+              <MessageSquare className="h-4 w-4 shrink-0" />
+              <span>문자 빠른 상담 접수</span>
             </a>
             <button
               onClick={() => {
                 onOpenAdmin();
                 setIsMobileMenuOpen(false);
               }}
-              className="py-1 text-center text-xs text-gray-400 font-medium"
+              className="py-1 text-center text-[10px] text-gray-400 font-medium hover:text-brand-600 cursor-pointer"
             >
               관리자 모드 실행
             </button>
