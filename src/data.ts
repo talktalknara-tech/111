@@ -5,10 +5,10 @@ import toiletUnclog from './assets/images/toilet_unclog_service_1780283646222.pn
 import sinkClogKorean from './assets/images/sink_clog_korean_service_1780285469645.png';
 import pumpReplaceKorean from './assets/images/pump_replace_korean_service_1780285490531.png';
 import frozenPipeThawingKorean from './assets/images/frozen_pipe_thawing_korean_1780285507918.png';
-import koreanDrainPlumber from './assets/images/korean_drain_plumber_1780285705013.png';
-import koreanFacilityTech from './assets/images/korean_facility_tech_1780285839002.png';
-import leakDetection from './assets/images/leak_detection_work_1790055543273.jpg';
-import waterHeater from './assets/images/water_heater_install_1790055560954.jpg';
+import koreanDrainPlumber from './assets/images/young_drain_plumber_1790055749827.jpg';
+import koreanFacilityTech from './assets/images/young_facility_tech_1790055764392.jpg';
+import leakDetection from './assets/images/young_leak_tech_1790055778091.jpg';
+import waterHeater from './assets/images/young_water_heater_1790055792109.jpg';
 import { ServiceItem, FaqItem } from './types';
 
 export const IMAGES = {
