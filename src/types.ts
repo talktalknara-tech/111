@@ -3,7 +3,7 @@ export interface ServiceItem {
   name: string;
   description: string;
   longDescription: string;
-  category: 'blockage' | 'replacement' | 'facility';
+  category: 'blockage' | 'replacement' | 'facility' | 'leak';
   imageSrc: string;
   features: string[];
   estimatedPrice: string;

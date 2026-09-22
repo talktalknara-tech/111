@@ -44,6 +44,8 @@ export default function InquiryForm({ preselectedService, onClearPreselected, on
     '가정용/산업용 펌프 교체',
     '동파 해빙 (보일러/수도 스팀 해빙)',
     '기타 종합 배관 설비 문의',
+    '정밀 누수탐지 및 배관 공사',
+    '전기온수기 교체 및 설치',
   ];
 
   const validate = () => {

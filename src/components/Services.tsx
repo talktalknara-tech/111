@@ -9,7 +9,7 @@ interface ServicesProps {
 }
 
 export default function Services({ onSelectServiceForInquiry }: ServicesProps) {
-  const [activeCategory, setActiveCategory] = useState<'all' | 'blockage' | 'replacement' | 'facility'>('all');
+  const [activeCategory, setActiveCategory] = useState<'all' | 'blockage' | 'replacement' | 'facility' | 'leak'>('all');
   const [selectedService, setSelectedService] = useState<ServiceItem | null>(null);
 
   const categories = [
@@ -17,6 +17,7 @@ export default function Services({ onSelectServiceForInquiry }: ServicesProps) {
     { id: 'blockage', label: '🌋 꽉 막힘 해결' },
     { id: 'replacement', label: '🔧 교체/설치' },
     { id: 'facility', label: '🏢 배관/종합설비' },
+    { id: 'leak', label: '💧 누수탐지/공사' },
   ];
 
   const filteredServices = SERVICES.filter(
@@ -33,11 +34,11 @@ export default function Services({ onSelectServiceForInquiry }: ServicesProps) {
             OUR SPECIALIZED SERVICES
           </span>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-900 mt-4 tracking-tight">
-            관통사들의 7대 핵심 전문 보증 설비
+            관통사들의 9대 핵심 전문 보증 설비
           </h2>
           <div className="w-16 h-1 bg-brand-600 mx-auto mt-4 rounded-full" />
           <p className="text-gray-600 mt-4 text-base font-medium">
-            단순히 뚫는 것을 넘어, 배관 설계 지식과 최첨단 스케일링 특수 장비를 활용하여 막힌 곳을 속 시원히 관통하고, 평생 품질 보장 책임을 약속합니다.
+            단순히 뚫는 것을 넘어, 최첨단 정밀 누수탐지부터 특수 장비 스케일링 배관 관통, 전기온수기 및 수전 교체 설비 공사까지, 평생 품질 보장 책임을 약속합니다.
           </p>
         </div>
 
@@ -81,18 +82,20 @@ export default function Services({ onSelectServiceForInquiry }: ServicesProps) {
                   />
                   {/* Category badget overlay */}
                   <span className={`absolute top-4 left-4 px-3 py-1 rounded-full text-xs font-bold shadow-sm ${
-                    service.category === 'blockage' 
+                    service.category === 'leak'
+                      ? 'bg-cyan-50 text-cyan-700 border border-cyan-200'
+                      : service.category === 'blockage' 
                       ? 'bg-red-50 text-red-600 border border-red-100'
                       : service.category === 'replacement'
                       ? 'bg-brand-50 text-brand-600 border border-brand-100'
                       : 'bg-indigo-50 text-indigo-600 border border-indigo-100'
                   }`}>
-                    {service.category === 'blockage' ? '막힘해결' : service.category === 'replacement' ? '설치교체' : '종합설비'}
+                    {service.category === 'leak' ? '누수탐지' : service.category === 'blockage' ? '막힘해결' : service.category === 'replacement' ? '설치교체' : '종합설비'}
                   </span>
                   
                   {/* Premium Guarantee stamp */}
                   <span className="absolute top-4 right-4 bg-emerald-600/90 backdrop-blur-sm text-white px-2.5 py-1 rounded-full text-[10px] font-extrabold tracking-tight shadow-sm">
-                    미해결 시 0원 보장
+                    {service.category === 'leak' ? '미발견 시 0원' : '미해결 시 0원 보장'}
                   </span>
                 </div>
 
@@ -181,7 +184,7 @@ export default function Services({ onSelectServiceForInquiry }: ServicesProps) {
                   </button>
                   <div className="absolute bottom-6 left-6 text-white">
                     <span className="bg-brand-500 text-white px-3 py-1 rounded-full text-xs font-bold mb-2 inline-block">
-                      {selectedService.category === 'blockage' ? '막힘해결' : selectedService.category === 'replacement' ? '설치교체' : '종합설비'}
+                      {selectedService.category === 'leak' ? '누수탐지 및 공사' : selectedService.category === 'blockage' ? '막힘해결' : selectedService.category === 'replacement' ? '설치교체' : '종합설비'}
                     </span>
                     <h3 className="text-2xl font-extrabold tracking-tight">
                       {selectedService.name}

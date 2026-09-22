@@ -7,6 +7,8 @@ import pumpReplaceKorean from './assets/images/pump_replace_korean_service_17802
 import frozenPipeThawingKorean from './assets/images/frozen_pipe_thawing_korean_1780285507918.png';
 import koreanDrainPlumber from './assets/images/korean_drain_plumber_1780285705013.png';
 import koreanFacilityTech from './assets/images/korean_facility_tech_1780285839002.png';
+import leakDetection from './assets/images/leak_detection_work_1790055543273.jpg';
+import waterHeater from './assets/images/water_heater_install_1790055560954.jpg';
 import { ServiceItem, FaqItem } from './types';
 
 export const IMAGES = {
@@ -18,6 +20,8 @@ export const IMAGES = {
   pump: pumpReplaceKorean,
   frozen: frozenPipeThawingKorean,
   facility: koreanFacilityTech,
+  leak: leakDetection,
+  waterHeater: waterHeater,
 };
 
 export const SERVICES: ServiceItem[] = [
@@ -90,6 +94,26 @@ export const SERVICES: ServiceItem[] = [
     imageSrc: koreanFacilityTech,
     features: ['전문 배관 자격 기능 전문 기술공 시공', '고질적 욕실 및 하수구 악취 원천 차단 트랩', '상업 주방 트렌치 배수 효율 증설', '배관 신설 도면 맞춤 레이아웃 설계'],
     estimatedPrice: '현장 방문 무료 상세 견적'
+  },
+  {
+    id: 'leak_detection',
+    name: '정밀 누수탐지 및 배관 공사',
+    description: '원인을 알 수 없는 미세 누수와 수도 요금 폭탄, 아랫집 물샘 피해를 최첨단 청음식·가스식·열화상 탐지기로 100% 찾아내어 완벽 공사합니다.',
+    longDescription: '육안으로 확인 불가능한 매립 배관의 미세 균열 및 누수를 독일제 초정밀 청음식 탐지기, 수소 혼합 가스 탐지기, 고해상도 열화상 카메라, 배관 정밀 공압 테스트를 통해 오차 없이 핀포인트로 특정합니다. 바닥이나 벽체의 무분별한 파쇄를 철저히 지양하며, 최소 타공 후 완벽한 배관 교체 및 방수 미장 복구 공사까지 원스톱으로 책임 시공합니다. 아파트/빌라 일상생활배상책임보험 청구에 필요한 기술 소견서와 증빙 서류 일체도 꼼꼼히 발행해 드립니다.',
+    category: 'leak',
+    imageSrc: leakDetection,
+    features: ['최첨단 4단 정밀 진단 (청음·가스·열화상·공압)', '무분별한 파쇄 없는 최소 타공 핀포인트 공사', '누수 지점 미발견 시 탐지비 0원 원칙', '일상생활배상책임보험 서류 완벽 지원'],
+    estimatedPrice: '원인 파악 및 현장 공사 범위별 사전 정찰 안내'
+  },
+  {
+    id: 'water_heater_install',
+    name: '전기온수기 교체 및 설치',
+    description: '가정, 상가, 식당, 미용실, 사무실 등 공간 맞춤형 전기온수기 신규 설치 및 노후 온수기 철거·교체를 안전하게 시공합니다.',
+    longDescription: '린나이, 귀뚜라미, 경동나비엔, 대성셀틱 등 국내 대표 브랜드 정품 저장식/순간식 전기온수기를 맞춤 설치합니다. 노후 온수기 부식으로 인한 녹물 및 누수 문제 해결부터, 감압 밸브(감압변) 적정 압력 세팅, 안전 밸브 시공, 고내구성 스테인리스 주름관 체결 및 누전 차단기 안전 점검까지 원스톱으로 꼼꼼하게 시공해 드립니다.',
+    category: 'replacement',
+    imageSrc: waterHeater,
+    features: ['국내 대표 브랜드 정품 온수기 취급', '감압변·안전밸브 표준 안전 규격 시공', '기존 노후 온수기 깔끔한 무상 철거 수거', '설치 완료 후 누수 검사 및 A/S 보증'],
+    estimatedPrice: '용량별(15L~100L+) 및 현장 배관 맞춤 투명 안내'
   }
 ];
 
@@ -141,5 +165,15 @@ export const FAQS: FaqItem[] = [
     id: 'faq_4',
     question: '배관을 뜯지 않고 해결할 수도 있나요?',
     answer: '네, 저희는 배관 탈거나 손상(타공) 없이 최신 첨단 석션 흡입 공법과 초슬림 고강도 텅스텐 플렉스 샤프트를 활용하는 "무손상 크랙리스 공법"을 최우선으로 투입합니다. 따라서 불필요한 인테리어 손실이나 높은 토목 해체 비용을 줄일 수 있어 비용을 크게 아끼실 수 있습니다.'
+  },
+  {
+    id: 'faq_5',
+    question: '누수 탐지 및 공사 비용을 일상생활배상책임보험으로 처리할 수 있나요?',
+    answer: '네, 가능합니다! 아랫집 천장 물샘 피해 복구 비용 및 우리 집 누수 원인 수리 비용에 대해 가입하신 실손보험이나 화재보험의 일상생활배상책임 특약 적용이 가능합니다. 관통사들은 보험사 제출에 필요한 정밀 기술 소견서, 누수 탐지 사진, 공사 전후 입증 자료 및 상세 견적서를 빠짐없이 지원해 드려 고객님의 경제적 부담을 대폭 덜어드립니다.'
+  },
+  {
+    id: 'faq_6',
+    question: '전기온수기 교체 시 기존 고장 난 온수기 수거도 해주시나요?',
+    answer: '네, 관통사들에서는 신규 전기온수기 설치 및 노후 온수기 교체 시 기존의 무겁고 부식된 폐온수기를 현장에서 안전하게 무상 철거 및 수거해 드립니다. 또한 감압 밸브(감압변)와 안전 밸브를 표준 안전 규격에 맞추어 시공하여 제품 수명과 안전성을 극대화합니다.'
   }
 ];
